@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>幸运大转盘</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script>
+        _resize();
+        window.addEventListener('resize', _resize, false);
+        function _resize() {
+            var html = document.documentElement;
+            var windowWidth = html.clientWidth;
+            if(windowWidth > 640){
+                windowWidth = 640;
+            }
+            html.style.fontSize = windowWidth / 6.4 + 'px';
+        }
+    </script>
+</head>
+<body>
+
+    <div class="game">
+        <div class="title">
+            <img src="images/game-title.png" alt="">  
+        </div>
+        <div class="luckDrawCount">你有<span>10</span>次抽奖机会</div>
+        <div class="wheel-box">
+            <div id="wheel"></div>
+            <div id="arrow"></div>
+        </div>
+    </div>
+    
+</body>
+<script src="js/game.js"></script>
+</html>
